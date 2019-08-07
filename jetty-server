@@ -1,0 +1,17 @@
+---
+- hosts: jettyservers
+  remote_user: jettyadmin
+
+  tasks:
+  - name: ensure openjdk-8-jdk prereq is installed
+    apt:
+      name: openjdk-8-jdk
+      state: latest
+  - name: ensure jetty is installed
+    apt:
+      name: jetty9
+      state: latest
+  - name: ensure jetty is running
+    service:
+      name: jetty9
+      state: started
