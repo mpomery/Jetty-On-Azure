@@ -12,6 +12,7 @@ What This Does
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 - [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 - [Terraform installed and configured to work with Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure)
+- sshpass installed
 
 ## How To
 
@@ -21,5 +22,6 @@ What This Does
 - Run `terraform apply` to deploy resources into azure
 - Log in to the Azure console and find the Jetty Public IP (Mine was `13.67.225.169`)
 - Update the Ansible `hosts` file to have your server listed under `[jettyservers]`
-- Run `ansible-playbook jetty-server -i hosts` to configure the Jetty Server
+- Run `ansible-playbook jetty-server -i hosts --ask-pass` to configure the Jetty Server
+- Enter the password that you set for the VM in jetty.tf
 - Visit your site to see Jetty in action
