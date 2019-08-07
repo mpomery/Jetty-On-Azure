@@ -1,5 +1,11 @@
 # Jetty On Azure
-Playbooks to set up a Jetty HTTP Server on Azure.
+
+What This Does
+
+- Configures an Azure enviroment
+- Creates a VM in Azure
+- Configures [Jetty](https://www.eclipse.org/jetty/) on that VM
+
 
 ## Prerequisites
 
@@ -10,5 +16,10 @@ Playbooks to set up a Jetty HTTP Server on Azure.
 
 ## How To
 
-- Run Terraform to deploy a VM to Azure, configure it and secure it
-- Run Ansible to configure Jetty on the spun up Azure VM
+- Clone this Repo
+- Ensure you have Terraform installed and [configured](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure#configure-terraform-environment-variables).
+- Run `terraform apply`
+- Log in to the Azure console and find the Jetty Public IP (Mine was `13.67.225.169`)
+- Update the Ansible environment file
+- Run the ansible playbook
+- Visit your site to see Jetty in action
