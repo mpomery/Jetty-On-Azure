@@ -21,5 +21,5 @@ What This Does
 - Run `terraform apply` to deploy resources into azure
 - Log in to the Azure console and find the Jetty Public IP (Mine was `13.67.225.169`)
 - Update the Ansible environment file
-- Run the ansible playbook
+- Run `ansible-playbook jetty-server` to configure the Jetty Server
 - Visit your site to see Jetty in action
