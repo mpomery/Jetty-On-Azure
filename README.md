@@ -18,7 +18,8 @@ What This Does
 
 - Clone this Repo
 - Ensure you have Terraform installed and [configured](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure#configure-terraform-environment-variables).
-- Run `terraform apply`
+- Run `terraform init` to ensure terraform is initialized
+- Run `terraform apply` to deploy resources into azure
 - Log in to the Azure console and find the Jetty Public IP (Mine was `13.67.225.169`)
 - Update the Ansible environment file
 - Run the ansible playbook
