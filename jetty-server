@@ -1,6 +1,8 @@
 ---
 - hosts: jettyservers
   remote_user: jettyadmin
+  become: true
+  become_method: sudo
 
   tasks:
   - name: ensure openjdk-8-jdk prereq is installed
